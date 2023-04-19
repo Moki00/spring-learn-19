@@ -15,8 +15,14 @@ public class SpringLearnApplication {
 	}
 
 	@GetMapping("/")
-	public String hello(@RequestParam(value = "name1", defaultValue = "Class") String name) {
-		return name;
+	public String hello(@RequestParam(value = "name1", defaultValue = "Class") String name2) {
+		return String.format("Hello %s", name2);
+
+	}
+
+	@GetMapping("/hello")
+	public String hello2(@RequestParam(value = "name1", defaultValue = "2") String name2) {
+		return String.format("We are on page %s", name2);
 
 	}
 
